@@ -1,0 +1,143 @@
+archetype (adl_version=1.4; uid=6c6aa9b1-7af3-4daa-bc8d-a3d62a48d834)
+	openEHR-EHR-OBSERVATION.conformance_interval.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-01-11">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"ad4920ce25b41bee05d174c475b8084b">
+		["build_uid"] = <"4f4e7257-0f97-367d-895f-55025cfa15d8">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- conformance interval
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- interval_dv_count
+										value matches {
+											DV_INTERVAL<DV_COUNT> matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- interval_dv_date
+										value matches {
+											DV_INTERVAL<DV_DATE> matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- interval_dv_time
+										value matches {
+											DV_INTERVAL<DV_DATE_TIME> matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- interval_dv_duration
+										value matches {
+											DV_INTERVAL<DV_DURATION> matches {*}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- interval_dv_quantity
+										value matches {
+											DV_INTERVAL<DV_QUANTITY> matches {*}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- interval_dv_time
+										value matches {
+											DV_INTERVAL<DV_TIME> matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_TEXT
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"conformance interval">
+					description = <"conformance interval">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"DV_TEXT">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"interval_dv_count">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"interval_dv_date">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"interval_dv_time">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"interval_dv_duration">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"interval_dv_quantity">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"interval_dv_time">
+					description = <"">
+				>
+			>
+		>
+	>
