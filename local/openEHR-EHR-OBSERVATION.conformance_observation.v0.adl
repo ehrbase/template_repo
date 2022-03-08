@@ -1,0 +1,283 @@
+archetype (adl_version=1.4; uid=35a88323-e880-4956-b0fa-2c94c22ebe05)
+	openEHR-EHR-OBSERVATION.conformance_observation.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-12-21">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"47a5d0a8648a03c407d8ae359ad2d238">
+		["build_uid"] = <"4ffca714-a684-3a42-9e60-36d62dc67b96">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Conformance Observation
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- DV_TEXT
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_CODED_TEXT
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0006,    -- term1
+													at0007]    -- term2
+												}
+											}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_QUANTITY
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- DV_PROPORTION
+										value matches {
+											DV_PROPORTION matches {*}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- DV_COUNT
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- DV_DATE_TIME
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- DV_TIME
+										value matches {
+											DV_TIME matches {*}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- DV_DATE
+										value matches {
+											DV_DATE matches {*}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											1|[local::at0015],
+											2|[local::at0016]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- DV_BOOLEAN
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- DV_DURATION
+										value matches {
+											DV_DURATION matches {*}
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- DV_IDENTIFIER
+										value matches {
+											DV_IDENTIFIER matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0024] occurrences matches {0..*} matches {    -- CLUSTER
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.conformance_cluster\.v0/}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- dv_ehr_uri
+										value matches {
+											DV_EHR_URI matches {*}
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- dv_multimedia
+										value matches {
+											DV_MULTIMEDIA matches {*}
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- dv_parsable
+										value matches {
+											DV_PARSABLE matches {*}
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- dv_uri
+										value matches {
+											DV_URI matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0029] matches {    -- Item tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- DV_TEXT_State
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0020] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0021] occurrences matches {0..1} matches {    -- DV_TEXT
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Conformance Observation">
+					description = <"Conformance Observation">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"DV_TEXT">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"DV_CODED_TEXT">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"term1">
+					description = <"term1">
+				>
+				["at0007"] = <
+					text = <"term2">
+					description = <"term2">
+				>
+				["at0008"] = <
+					text = <"DV_QUANTITY">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"DV_PROPORTION">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"DV_DATE_TIME">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"DV_TIME">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"DV_DATE">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"value1">
+					description = <"value1">
+				>
+				["at0016"] = <
+					text = <"value2">
+					description = <"value2">
+				>
+				["at0017"] = <
+					text = <"DV_BOOLEAN">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"DV_DURATION">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"DV_IDENTIFIER">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0021"] = <
+					text = <"DV_TEXT">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"CLUSTER">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"dv_ehr_uri">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"dv_multimedia">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"dv_parsable">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"dv_uri">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"DV_TEXT_State">
+					description = <"">
+				>
+			>
+		>
+	>
