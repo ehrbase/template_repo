@@ -1,0 +1,62 @@
+archetype (adl_version=1.4; uid=7b4542e5-a511-4526-93b0-ea1d8c8a8d03)
+	openEHR-EHR-COMPOSITION.conformance_composition_.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-12-21">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0fb95250330aa23652f66a22d74d7e22">
+		["build_uid"] = <"ef00606a-340f-3094-8b9a-03eabd65a322">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- conformance composition
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0001] matches {*}    -- ITEM_TREE
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"conformance composition">
+					description = <"conformance composition ">
+				>
+				["at0001"] = <
+					text = <"ITEM_TREE">
+					description = <"*">
+				>
+			>
+		>
+	>
