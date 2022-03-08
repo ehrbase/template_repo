@@ -1,0 +1,63 @@
+archetype (adl_version=1.4; uid=a48a73c1-0d91-481f-b234-f6f41951008c)
+	openEHR-EHR-ADMIN_ENTRY.conformance_admin_entry.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-12-21">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"92f03aaa0b739b02dec534f95ea704e1">
+		["build_uid"] = <"ac4f4189-9414-31e9-84cd-eb51eac54ec8">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- conformance admin entry
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- DV_TEXT
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"conformance admin entry">
+					description = <"conformance admin entry">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"DV_TEXT">
+					description = <"">
+				>
+			>
+		>
+	>
