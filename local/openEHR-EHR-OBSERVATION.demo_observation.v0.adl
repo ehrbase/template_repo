@@ -1,0 +1,96 @@
+archetype (adl_version=1.4; uid=70a15cc2-a37d-4929-8d8b-ff65b29730de)
+	openEHR-EHR-OBSERVATION.demo_observation.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-07-01">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1a26871431c15e112e5863ba249bcfe8">
+		["build_uid"] = <"d4da78ef-c965-3989-bbeb-9aa0c49f8b07">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- demo_observation
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- demo_text_value
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- demo_quantitiy
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.lab_demo\.v0|openEHR-EHR-CLUSTER\.free_text\.v0/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"demo_observation">
+					description = <"demo_observation">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"demo_text_value">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"demo_quantitiy">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"CLUSTER_SLOT">
+					description = <"">
+				>
+			>
+		>
+	>
