@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5aa93dc80a38f66b4e778b44364627a5">
+		["MD5-CAM-1.0.1"] = <"2c31e80846df9f8ef6fb23c18765bfac">
 		["build_uid"] = <"656e6b22-627e-3e00-af49-5c43b55408d1">
 	>
 
@@ -32,7 +32,9 @@ definition
 		name matches {
 			DV_CODED_TEXT matches {
 				defining_code matches {
-					[local::at0001]    -- NameOne
+					[local::
+					at0001,    -- NameOne
+					at0002]    -- NameTwo
 				}
 			}
 		}
@@ -48,6 +50,10 @@ ontology
 				>
 				["at0001"] = <
 					text = <"NameOne">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"NameTwo">
 					description = <"">
 				>
 			>
