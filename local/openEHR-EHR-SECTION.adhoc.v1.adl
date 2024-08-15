@@ -97,6 +97,12 @@ description
 ">
 			misuse = <"Die Überschrift sollte in einem Template nicht unverändert verwendet werden.">
 		>
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			purpose = <"En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext.">
+			use = <"Används för att skapa en avsnittsrubrik i en openEHR-mall som sedan döps om för att passa in i den specifika kliniska kontexten. Exempelvis \"Rubrik\" döps om till \"Undersökningsfynd\".">
+			misuse = <"Ska inte lämnas oförändrad i en openEHR-mall.">
+		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
 			purpose = <"Базовый заголовок раздела, должен быть переименован в локальном шаблоне ">
@@ -105,11 +111,11 @@ description
 			use = <"используется для создания и именования разделов в локальных шаблонах">
 			misuse = <"*Not to be left unchanged in a template.(en)">
 		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			purpose = <"En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext.">
-			use = <"Används för att skapa en avsnittsrubrik i en openEHR-mall som sedan döps om för att passa in i den specifika kliniska kontexten. Exempelvis \"Rubrik\" döps om till \"Undersökningsfynd\".">
-			misuse = <"Ska inte lämnas oförändrad i en openEHR-mall.">
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Brukes som en generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst.">
+			use = <"Brukes til å lage en seksjonsoverskrift i en templat, hvis navn deretter endres for å passe i den aktuelle kliniske konteksten. For eksempel: \"Templat-overskrift\" endret til \"Funn ved undersøkelse\", \"Anamnese\", \"Personopplysninger\" eller \"Oppsummering\".">
+			misuse = <"Skal ikke stå med uendret navn i en templat.">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -118,12 +124,6 @@ description
 			use = <"Utilizar para construir un encabezado de sección en una plantilla y que será renombrado para su empleo en un contexto clínico específico. Por ejemplo, \"Encabezado ad hoc\" puede renombrarse como \"Hallazgos de examen\".">
 			misuse = <"No debe mantenerse sin cambios en una plantilla.">
 		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			purpose = <"Brukes som en generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst.">
-			use = <"Brukes til å lage en seksjonsoverskrift i en templat, hvis navn deretter endres for å passe i den aktuelle kliniske konteksten. For eksempel: \"Templat-overskrift\" endret til \"Funn ved undersøkelse\", \"Anamnese\", \"Personopplysninger\" eller \"Oppsummering\".">
-			misuse = <"Skal ikke stå med uendret navn i en templat.">
-		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Oferecer um cabeçalho de uma sessão genérica que será renomeado no template para adequar-se a um contexto clínico específico.">
@@ -131,19 +131,19 @@ description
 			use = <"Utilize para construir um cabeçalho de uma sessão (de um template) que será renomeada para adequar-se a um contexto clínico específico. Por exemplo: \"cabeçalho Ad hoc\" renomeado para \"Achados de exame\".">
 			misuse = <"Não deve manter a configuração original no template.">
 		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)">
-			copyright = <"© openEHR Foundation">
-			use = <"*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)">
-			misuse = <"*Not to be left unchanged in a template.(en)">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To provide a generic section header which will be renamed in a template to suit a specific clinical context.">
 			copyright = <"© openEHR Foundation">
 			use = <"Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".">
 			misuse = <"Not to be left unchanged in a template.">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)">
+			misuse = <"*Not to be left unchanged in a template.(en)">
 		>
 		["it"] = <
 			language = <[ISO_639-1::it]>
@@ -165,7 +165,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8FE80F3E80C594AAF99D3BA540A53D73">
+		["MD5-CAM-1.0.1"] = <"667808fd168678ecc54d97fe607611cf">
 		["build_uid"] = <"46fe0e95-f5cc-44c8-8616-3b9fd0ca6e61">
 		["revision"] = <"1.0.8">
 	>
