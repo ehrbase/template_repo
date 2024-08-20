@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2c31e80846df9f8ef6fb23c18765bfac">
+		["MD5-CAM-1.0.1"] = <"234d7281fa50fdeba64fa0d5dd1c2252">
 		["build_uid"] = <"656e6b22-627e-3e00-af49-5c43b55408d1">
 	>
 
@@ -35,6 +35,13 @@ definition
 					[local::
 					at0001,    -- NameOne
 					at0002]    -- NameTwo
+				}
+			}
+		}
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- test
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 		}
@@ -54,6 +61,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"NameTwo">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"test">
 					description = <"">
 				>
 			>
