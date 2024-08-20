@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b5854414c80c0fcd041282e3a60d1e74",
+      "MD5-CAM-1.0.1" : "f188d8c607fd23b30b12d469adab7af0",
       "PARENT:MD5-CAM-1.0.1" : "DE0723367AA22BB716CEC5342B21FF60"
     },
     "details" : {
@@ -318,7 +318,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "2505617dcad49f7f1543291ad6847cbc"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.name_test.v0",
     "differential" : true,
@@ -384,7 +397,7 @@
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..*",
+                      "occurrences" : "0..1",
                       "nodeId" : "at0004.4",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
@@ -439,7 +452,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "9f23ee81b42e81eee6a0bed51d7884b6"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.name.v0",
     "differential" : true,
@@ -490,7 +516,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "c6058413294b30506bf2552ea393f4c0"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.name_restricted.v0",
     "differential" : true,
@@ -548,7 +587,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "c6058413294b30506bf2552ea393f4c0"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.name_restricted.v0",
     "differential" : true,
@@ -595,7 +647,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "d489f210-f79f-4684-85cf-afe601f60c06",
+    "uid" : "11257d2f-ae7c-485b-9135-0a3b09c67b96",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -604,7 +656,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "2c31e80846df9f8ef6fb23c18765bfac"
+        "PARENT:MD5-CAM-1.0.1" : "234d7281fa50fdeba64fa0d5dd1c2252"
       },
       "details" : { }
     },
@@ -629,13 +681,12 @@
             "rmAttributeName" : "defining_code",
             "children" : [ {
               "@type" : "C_TERMINOLOGY_CODE",
-              "rmTypeName" : "TERMINOLOGY_CODE",
+              "rmTypeName" : "CODE_PHRASE",
               "occurrences" : "1..1",
               "terminologyId" : {
                 "value" : "local"
               },
-              "constraint" : [ "ac0.8" ],
-              "selectedTerminologies" : [ ]
+              "constraint" : [ "at0001", "at0002" ]
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -647,59 +698,11 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.8",
-            "description" : ""
-          }
-        }
+        "en" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0001", "at0002" ]
-        },
-        "ac0.2" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.2",
-          "members" : [ "at0001", "at0002" ]
-        },
-        "ac0.3" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.3",
-          "members" : [ "at0001", "at0002" ]
-        },
-        "ac0.4" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.4",
-          "members" : [ "at0001", "at0002" ]
-        },
-        "ac0.5" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.5",
-          "members" : [ "at0001", "at0002" ]
-        },
-        "ac0.6" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.6",
-          "members" : [ "at0001", "at0002" ]
-        },
-        "ac0.7" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.7",
-          "members" : [ "at0001", "at0002" ]
-        },
-        "ac0.8" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.8",
-          "members" : [ "at0001", "at0002" ]
-        }
-      }
+      "valueSets" : { }
     },
     "adlVersion" : "1.4",
     "buildUid" : "656e6b22-627e-3e00-af49-5c43b55408d1",
