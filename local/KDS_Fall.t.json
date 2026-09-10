@@ -1,0 +1,4011 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "7337cd29-751d-414f-a162-9e0fc51169f1",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2024-07-02"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "",
+      "custodian_organisation" : "",
+      "original_namespace" : "",
+      "original_publisher" : "",
+      "custodian_namespace" : "",
+      "sem_ver" : "9.0.0",
+      "build_uid" : "",
+      "MD5-CAM-1.0.1" : "8e3cb6256c78908b0e6f7fe0240e8abe",
+      "PARENT:MD5-CAM-1.0.1" : "AFFFB351A3113D61F0822FEBDF5F42E3",
+      "original_language" : "ISO_639-1::de"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "purpose" : "Zur Darstellung eines stationären Aufenthalt oder ambulante Kontakt eines Patienten in einer Gesundheitseinrichtung.",
+        "keywords" : [ "stationärer Aufenthalt, ambulanter Aufenthalt, Einrichtungskontakt, Versorgungstellenkontakt, Abteilungskontakt" ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "de" : {
+        "/context/other_context[at0001]/items[at0010]" : {
+          "fhir" : "Encounter.status"
+        },
+        "/context/other_context[at0001]/items[at0011]" : {
+          "fhir" : "Encounter.partOf"
+        },
+        "/context/other_context[at0001]/items[at0010.1]" : {
+          "fhir" : "Encounter.type.KontaktArt"
+        },
+        "/context/other_context[at0001]/items[at0004.1]" : {
+          "fhir" : "Encounter.class"
+        },
+        "/context/other_context[at0001]/items[at0003]" : {
+          "fhir" : "Encounter.identifier:Aufnahmenummer"
+        },
+        "/context/other_context[at0001]/items[at0005.1]" : {
+          "fhir" : "Encounter.type:Kontaktebene"
+        }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-COMPOSITION.fall.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-COMPOSITION.t_fall.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "COMPOSITION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "context",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "EVENT_CONTEXT",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "other_context",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ITEM_TREE",
+            "nodeId" : "at0001",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "items",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ELEMENT",
+                "nodeId" : "at0005.1",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "DV_CODED_TEXT",
+                    "occurrences" : "0..1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "defining_code",
+                      "existence" : "0..1",
+                      "children" : [ {
+                        "@type" : "C_TERMINOLOGY_CODE",
+                        "terminologyId" : {
+                          "value" : "//fhir.hl7.org/"
+                        },
+                        "constraint" : [ "ac0.1" ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              }, {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ELEMENT",
+                "occurrences" : "1..1",
+                "nodeId" : "at0004.1",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "DV_CODED_TEXT",
+                    "occurrences" : "0..1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "defining_code",
+                      "existence" : "0..1",
+                      "children" : [ {
+                        "@type" : "C_TERMINOLOGY_CODE",
+                        "terminologyId" : {
+                          "value" : "//fhir.hl7.org/"
+                        },
+                        "constraint" : [ "ac0.2" ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              }, {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ELEMENT",
+                "nodeId" : "at0010.1",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "DV_CODED_TEXT",
+                    "occurrences" : "0..1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "defining_code",
+                      "existence" : "0..1",
+                      "children" : [ {
+                        "@type" : "C_TERMINOLOGY_CODE",
+                        "terminologyId" : {
+                          "value" : "//fhir.hl7.org/"
+                        },
+                        "constraint" : [ "ac0.3" ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              }, {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..1",
+                "nodeId" : "at0012.1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-organization-000.v0",
+                "referenceType" : "archetypeOverlay"
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "content",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "ADMIN_ENTRY",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-ADMIN_ENTRY.ovl-episode_institution-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.2",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-problem_diagnosis-004.v1",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "de" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "KDS_Fall",
+          "description" : "Strukturierte Sammlung von Informationen zu einem Sachverhalt oder Problem, der bzw. das bearbeitet werden muss. Die Bearbeitungsschritte eines Falles werden durch Aktivitäten und Bearbeiter definiert, die dem Fall zugeordnet werden."
+        },
+        "at0010.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010.1",
+          "text" : "Fallart",
+          "description" : "Status des Falls",
+          "comment" : "Status des Falls",
+          "fhir" : "Encounter.status"
+        }
+      }
+    },
+    "termBindings" : {
+      "//fhir.hl7.org/" : {
+        "ac0.1" : "ValueSet/$expand?url=http://fhir.de/ValueSet/kontaktebene-de",
+        "ac0.2" : "ValueSet/$expand?url=http://fhir.de/ValueSet/EncounterClassDE",
+        "ac0.3" : "ValueSet/$expand?url=http://fhir.de/ValueSet/kontaktart-de"
+      }
+    },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "e32323dc-9c72-3a14-bcaf-ff8c237de1f7",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "KDS_Fall",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "c1af6cbf-71d4-48f5-896a-2fa0f55630d9",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D89C6BDB7361A3527154105AF319A685"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "fhir" : "Organization"
+          },
+          "/items[at0052]" : {
+            "fhir" : "Encounter.serviceType.text"
+          },
+          "/items[at0047]" : {
+            "fhir" : "Organization.address"
+          },
+          "/items[at0024.1]" : {
+            "fhir" : "Encounter.serviceType.coding:ErweiterterFachabteilungsschlüssel"
+          },
+          "/items[at0050.1]" : {
+            "fhir" : "Organization.active"
+          },
+          "/items[at0051]" : {
+            "fhir" : "Organization.type"
+          }
+        },
+        "de" : {
+          "" : {
+            "fhir" : "Organization"
+          },
+          "/items[at0051]" : {
+            "fhir" : "Organization.type"
+          },
+          "/items[at0050]" : {
+            "fhir" : "Organization.active"
+          },
+          "/items[at0052]" : {
+            "fhir" : "Encounter.serviceType.text"
+          },
+          "/items[at0024]" : {
+            "fhir" : "Organization.identifier"
+          },
+          "/items[at0047]" : {
+            "fhir" : "Organization.address"
+          },
+          "/items[at0024.1]" : {
+            "fhir" : "Encounter.serviceType.coding:ErweiterterFachabteilungsschlüssel"
+          },
+          "/items[at0050.1]" : {
+            "fhir" : "Organization.active"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.organization.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-organization-000.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0024.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "0..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "//fhir.hl7.org/"
+                  },
+                  "constraint" : [ "ac0.1" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0050.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fachabteilung",
+            "description" : "Location includes both casual locations (a place used for health care without prior designation or authorisation) and dedicated, formally designated locations. The sites can be private, public, mobile or fixed."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.1",
+            "text" : "Fachabteilungsschlüssel",
+            "description" : "A group of buildings or other locations such as a site or campus. For example: Campus that is outside the facility, but belongs to the hospital, university."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fachabteilung",
+            "description" : "Eine fachliche Einheit, Organisation, Abteilung, Zusammenschluss, Gruppierung mit einem gemeinsamen Ziel.",
+            "fhir" : "Organization"
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.1",
+            "text" : "Fachabteilungsschlüssel",
+            "description" : "Eindeutiger Identifikator der Organisationseinheit.",
+            "fhir" : "Organization.identifier"
+          }
+        }
+      },
+      "termBindings" : {
+        "//fhir.hl7.org/" : {
+          "ac0.1" : "ValueSet/$expand?url=http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "1c83fe3f-74ff-4978-b554-27c52725b889",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout",
+        "organisation" : "MHH-Hannover",
+        "email" : "ballout.sarah@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "8be783ed-7a69-4f43-8816-978891a472df",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "5C6AE77EB9402F37B0618E289B67FC98"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/items[at0008.1]" : {
+            "fhir" : "Encounter.extension:Aufnahmegrund"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.hospitalization.admitSource"
+          },
+          "/data[at0001]/items[at0006.1]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          },
+          "/data[at0001]/items[at0018]" : {
+            "fhir" : "Encounter.location"
+          },
+          "/data[at0001]/items[at0018]/items[at0022]" : {
+            "fhir" : "Encounter.location:Station"
+          },
+          "/data[at0001]/items[at0018]/items[at0023]" : {
+            "fhir" : "Encounter.location:Zimmer"
+          },
+          "/data[at0001]/items[at0018]/items[at0024]" : {
+            "fhir" : "Encounter.location:Bett"
+          },
+          "/data[at0001]/items[at0002]" : {
+            "fhir" : "Encounter.period.end"
+          }
+        },
+        "de" : {
+          "/data[at0001]/items[at0008.1]" : {
+            "fhir" : "Encounter.extension:Aufnahmegrund"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.hospitalization.admitSource"
+          },
+          "/data[at0001]/items[at0006.1]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          },
+          "/data[at0001]/items[at0018]" : {
+            "fhir" : "Encounter.location"
+          },
+          "/data[at0001]/items[at0018]/items[at0022]" : {
+            "fhir" : "Encounter.location:Station"
+          },
+          "/data[at0001]/items[at0018]/items[at0023]" : {
+            "fhir" : "Encounter.location:Zimmer"
+          },
+          "/data[at0001]/items[at0018]/items[at0024]" : {
+            "fhir" : "Encounter.location:Bett"
+          },
+          "/data[at0001]/items[at0002]" : {
+            "fhir" : "Encounter.period.end"
+          }
+        },
+        "nb" : {
+          "/data[at0001]/items[at0008.1]" : {
+            "fhir" : "Encounter.extension:Aufnahmegrund"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.hospitalization.admitSource"
+          },
+          "/data[at0001]/items[at0006.1]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          },
+          "/data[at0001]/items[at0018]" : {
+            "fhir" : "Encounter.location"
+          },
+          "/data[at0001]/items[at0018]/items[at0022]" : {
+            "fhir" : "Encounter.location:Station"
+          },
+          "/data[at0001]/items[at0018]/items[at0023]" : {
+            "fhir" : "Encounter.location:Zimmer"
+          },
+          "/data[at0001]/items[at0018]/items[at0024]" : {
+            "fhir" : "Encounter.location:Bett"
+          },
+          "/data[at0001]/items[at0002]" : {
+            "fhir" : "Encounter.period.end"
+          }
+        },
+        "it" : {
+          "/data[at0001]/items[at0008.1]" : {
+            "fhir" : "Encounter.extension:Aufnahmegrund"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.hospitalization.admitSource"
+          },
+          "/data[at0001]/items[at0006.1]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          },
+          "/data[at0001]/items[at0018]" : {
+            "fhir" : "Encounter.location"
+          },
+          "/data[at0001]/items[at0018]/items[at0022]" : {
+            "fhir" : "Encounter.location:Station"
+          },
+          "/data[at0001]/items[at0018]/items[at0023]" : {
+            "fhir" : "Encounter.location:Zimmer"
+          },
+          "/data[at0001]/items[at0018]/items[at0024]" : {
+            "fhir" : "Encounter.location:Bett"
+          },
+          "/data[at0001]/items[at0002]" : {
+            "fhir" : "Encounter.period.end"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-ADMIN_ENTRY.episode_institution.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-ADMIN_ENTRY.ovl-episode_institution-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "ADMIN_ENTRY",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0014.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0004.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0008.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "0..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "existence" : "0..1",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "local_terms"
+                      },
+                      "constraint" : [ ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "0101",
+                        "value" : "Krankenhausbehandlung, vollstationär/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0102",
+                        "value" : "Krankenhausbehandlung, vollstationär/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0103",
+                        "value" : "vollstationär/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0104",
+                        "value" : "Krankenhausbehandlung, vollstationär/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0106",
+                        "value" : "Krankenhausbehandlung, vollstationär/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0107",
+                        "value" : "Krankenhausbehandlung, vollstationär/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "010x",
+                        "value" : "Krankenhausbehandlung, vollstationär/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0121",
+                        "value" : "Krankenhausbehandlung, vollstationär/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0122",
+                        "value" : "Krankenhausbehandlung, vollstationär/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0123",
+                        "value" : "Krankenhausbehandlung, vollstationär/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0124",
+                        "value" : "Krankenhausbehandlung, vollstationär/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0126",
+                        "value" : "Krankenhausbehandlung, vollstationär/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0127",
+                        "value" : "Krankenhausbehandlung, vollstationär/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "012x",
+                        "value" : "Krankenhausbehandlung, vollstationär/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0141",
+                        "value" : "Krankenhausbehandlung, vollstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0142",
+                        "value" : "Krankenhausbehandlung, vollstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0143",
+                        "value" : "Krankenhausbehandlung, vollstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0144",
+                        "value" : "Krankenhausbehandlung, vollstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0146",
+                        "value" : "Krankenhausbehandlung, vollstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0147",
+                        "value" : "Krankenhausbehandlung, vollstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "014x",
+                        "value" : "Krankenhausbehandlung, vollstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01x1",
+                        "value" : "Krankenhausbehandlung, vollstationär//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01x2",
+                        "value" : "Krankenhausbehandlung, vollstationär//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01x3",
+                        "value" : "Krankenhausbehandlung, vollstationär//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01x4",
+                        "value" : "Krankenhausbehandlung, vollstationär//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01x6",
+                        "value" : "Krankenhausbehandlung, vollstationär//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01x7",
+                        "value" : "Krankenhausbehandlung, vollstationär//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01xx",
+                        "value" : "Krankenhausbehandlung, vollstationär//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0201",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0202",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0203",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0204",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0206",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0207",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "020x",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0221",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0222",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0223",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0224",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0226",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0227",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "022x",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0241",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0242",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0243",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0244",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0246",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0247",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "024x",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02x1",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02x2",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02x3",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02x4",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02x6",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02x7",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02xx",
+                        "value" : "Krankenhausbehandlung, vollstationär mit vorausgegangener vorstationärer Behandlung//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0301",
+                        "value" : "Krankenhausbehandlung, teilstationär/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0302",
+                        "value" : "Krankenhausbehandlung, teilstationär/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0303",
+                        "value" : "Krankenhausbehandlung, teilstationär/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0304",
+                        "value" : "Krankenhausbehandlung, teilstationär/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0306",
+                        "value" : "Krankenhausbehandlung, teilstationär/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0307",
+                        "value" : "Krankenhausbehandlung, teilstationär/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "030x",
+                        "value" : "Krankenhausbehandlung, teilstationär/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0321",
+                        "value" : "Krankenhausbehandlung, teilstationär/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0322",
+                        "value" : "Krankenhausbehandlung, teilstationär/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0323",
+                        "value" : "Krankenhausbehandlung, teilstationär/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0324",
+                        "value" : "Krankenhausbehandlung, teilstationär/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0326",
+                        "value" : "Krankenhausbehandlung, teilstationär/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0327",
+                        "value" : "Krankenhausbehandlung, teilstationär/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "032x",
+                        "value" : "Krankenhausbehandlung, teilstationär/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0341",
+                        "value" : "Krankenhausbehandlung, teilstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0342",
+                        "value" : "Krankenhausbehandlung, teilstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0343",
+                        "value" : "Krankenhausbehandlung, teilstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0344",
+                        "value" : "Krankenhausbehandlung, teilstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0346",
+                        "value" : "Krankenhausbehandlung, teilstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0347",
+                        "value" : "Krankenhausbehandlung, teilstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "034x",
+                        "value" : "Krankenhausbehandlung, teilstationär/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03x1",
+                        "value" : "Krankenhausbehandlung, teilstationär//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03x2",
+                        "value" : "Krankenhausbehandlung, teilstationär//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03x3",
+                        "value" : "Krankenhausbehandlung, teilstationär//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03x4",
+                        "value" : "Krankenhausbehandlung, teilstationär//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03x6",
+                        "value" : "Krankenhausbehandlung, teilstationär//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03x7",
+                        "value" : "Krankenhausbehandlung, teilstationär//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03xx",
+                        "value" : "Krankenhausbehandlung, teilstationär//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0401",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0402",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0403",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0404",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0406",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0407",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "040x",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0421",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0422",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0423",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0424",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0426",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0427",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "042x",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0441",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0442",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0443",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0444",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0446",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0447",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "044x",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04x1",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04x2",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04x3",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04x4",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04x6",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04x7",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04xx",
+                        "value" : "vorstationäre Behandlung ohne anschließende vollstationäre Behandlung//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0501",
+                        "value" : "Stationäre Entbindung/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0502",
+                        "value" : "Stationäre Entbindung/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0503",
+                        "value" : "Stationäre Entbindung/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0504",
+                        "value" : "Stationäre Entbindung/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0506",
+                        "value" : "Stationäre Entbindung/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0507",
+                        "value" : "Stationäre Entbindung/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "050x",
+                        "value" : "Stationäre Entbindung/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0521",
+                        "value" : "Stationäre Entbindung/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0522",
+                        "value" : "Stationäre Entbindung/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0523",
+                        "value" : "Stationäre Entbindung/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0524",
+                        "value" : "Stationäre Entbindung/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0526",
+                        "value" : "Stationäre Entbindung/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0527",
+                        "value" : "Stationäre Entbindung/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "052x",
+                        "value" : "Stationäre Entbindung/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0541",
+                        "value" : "Stationäre Entbindung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0542",
+                        "value" : "Stationäre Entbindung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0543",
+                        "value" : "Stationäre Entbindung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0544",
+                        "value" : "Stationäre Entbindung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0546",
+                        "value" : "Stationäre Entbindung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0547",
+                        "value" : "Stationäre Entbindung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "054x",
+                        "value" : "Stationäre Entbindung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05x1",
+                        "value" : "Stationäre Entbindung//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05x2",
+                        "value" : "Stationäre Entbindung//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05x3",
+                        "value" : "Stationäre Entbindung//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05x4",
+                        "value" : "Stationäre Entbindung//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05x6",
+                        "value" : "Stationäre Entbindung//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05x7",
+                        "value" : "Stationäre Entbindung//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05xx",
+                        "value" : "Stationäre Entbindung//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0601",
+                        "value" : "Geburt/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0602",
+                        "value" : "Geburt/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0603",
+                        "value" : "Geburt/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0604",
+                        "value" : "Geburt/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0606",
+                        "value" : "Geburt/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0607",
+                        "value" : "Geburt/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "060x",
+                        "value" : "Geburt/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0621",
+                        "value" : "Geburt/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0622",
+                        "value" : "Geburt/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0623",
+                        "value" : "Geburt/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0624",
+                        "value" : "Geburt/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0626",
+                        "value" : "Geburt/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0627",
+                        "value" : "Geburt/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "062x",
+                        "value" : "Geburt/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0641",
+                        "value" : "Geburt/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0642",
+                        "value" : "Geburt/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0643",
+                        "value" : "Geburt/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0644",
+                        "value" : "Geburt/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0646",
+                        "value" : "Geburt/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0647",
+                        "value" : "Geburt/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "064x",
+                        "value" : "Geburt/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06x1",
+                        "value" : "Geburt//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06x2",
+                        "value" : "Geburt//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06x3",
+                        "value" : "Geburt//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06x4",
+                        "value" : "Geburt//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06x6",
+                        "value" : "Geburt//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06x7",
+                        "value" : "Geburt//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06xx",
+                        "value" : "Geburt//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0701",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0702",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0703",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0704",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0706",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0707",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "070x",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0721",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0722",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0723",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0724",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0726",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0727",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "072x",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0741",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0742",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0743",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0744",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0746",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0747",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "074x",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07x1",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07x2",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07x3",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07x4",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07x6",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07x7",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07xx",
+                        "value" : "Wiederaufnahme wegen Komplikationen (Fallpauschale) nach KFPV 2003//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0801",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0802",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0803",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0804",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0806",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0807",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "080x",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0821",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0822",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0823",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0824",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0826",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0827",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "082x",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0841",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0842",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0843",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0844",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0846",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0847",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "084x",
+                        "value" : "Stationäre Aufnahme zur Organentnahme/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08x1",
+                        "value" : "Stationäre Aufnahme zur Organentnahme//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08x2",
+                        "value" : "Stationäre Aufnahme zur Organentnahme//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08x3",
+                        "value" : "Stationäre Aufnahme zur Organentnahme//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08x4",
+                        "value" : "Stationäre Aufnahme zur Organentnahme//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08x6",
+                        "value" : "Stationäre Aufnahme zur Organentnahme//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08x7",
+                        "value" : "Stationäre Aufnahme zur Organentnahme//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08xx",
+                        "value" : "Stationäre Aufnahme zur Organentnahme//"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1001",
+                        "value" : "Stationsäquivalente Behandlung/Anderes/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1002",
+                        "value" : "Stationsäquivalente Behandlung/Anderes/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1003",
+                        "value" : "Stationsäquivalente Behandlung/Anderes/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1004",
+                        "value" : "Stationsäquivalente Behandlung/Anderes/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1006",
+                        "value" : "Stationsäquivalente Behandlung/Anderes/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1007",
+                        "value" : "Stationsäquivalente Behandlung/Anderes/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "100x",
+                        "value" : "Stationsäquivalente Behandlung/Anderes/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1021",
+                        "value" : "Stationsäquivalente Behandlung/Zuständigkeitswechsel des Kostenträgers/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1022",
+                        "value" : "Stationsäquivalente Behandlung/Zuständigkeitswechsel des Kostenträgers/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1023",
+                        "value" : "Stationsäquivalente Behandlung/Zuständigkeitswechsel des Kostenträgers/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1024",
+                        "value" : "Stationsäquivalente Behandlung/Zuständigkeitswechsel des Kostenträgers/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1026",
+                        "value" : "Stationsäquivalente Behandlung/Zuständigkeitswechsel des Kostenträgers/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1027",
+                        "value" : "Stationsäquivalente Behandlung/Zuständigkeitswechsel des Kostenträgers/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "102x",
+                        "value" : "Stationsäquivalente Behandlung/Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1041",
+                        "value" : "Stationsäquivalente Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1042",
+                        "value" : "Stationsäquivalente Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1043",
+                        "value" : "Stationsäquivalente Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1044",
+                        "value" : "Stationsäquivalente Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1046",
+                        "value" : "Stationsäquivalente Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "1047",
+                        "value" : "Stationsäquivalente Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "104x",
+                        "value" : "Stationsäquivalente Behandlung/Behandlungen im Rahmen von Verträgen zur integrierten Versorgung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10x1",
+                        "value" : "Stationsäquivalente Behandlung//Normalfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10x2",
+                        "value" : "Stationsäquivalente Behandlung//Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10x3",
+                        "value" : "Stationsäquivalente Behandlung//Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10x4",
+                        "value" : "Stationsäquivalente Behandlung//Hinweis auf Einwirkung von äußerer Gewalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10x6",
+                        "value" : "Stationsäquivalente Behandlung//Kriegsbeschädigten-Leiden/BVG-Leiden"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10x7",
+                        "value" : "Stationsäquivalente Behandlung//Notfall"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10xx",
+                        "value" : "Stationsäquivalente Behandlung//"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0009.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "0..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "existence" : "0..1",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "//fhir.hl7.org/"
+                      },
+                      "constraint" : [ "ac0.1" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0016.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0026.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0021.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0018",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0019.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0020.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0006.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "0..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "existence" : "0..1",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "local_terms"
+                      },
+                      "constraint" : [ ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "011",
+                        "value" : "Behandlung regulär beendet/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "012",
+                        "value" : "Behandlung regulär beendet/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "019",
+                        "value" : "Behandlung regulär beendet/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "01x",
+                        "value" : "Behandlung regulär beendet/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "021",
+                        "value" : "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "022",
+                        "value" : "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "029",
+                        "value" : "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "02x",
+                        "value" : "Behandlung regulär beendet, nachstationäre Behandlung vorgesehen/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "031",
+                        "value" : "Behandlung aus sonstigen Gründen beendet/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "032",
+                        "value" : "Behandlung aus sonstigen Gründen beendet/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "039",
+                        "value" : "Behandlung aus sonstigen Gründen beendet/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "03x",
+                        "value" : "Behandlung aus sonstigen Gründen beendet/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "041",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "042",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "049",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "04x",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "051",
+                        "value" : "Zuständigkeitswechsel des Kostenträgers/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "052",
+                        "value" : "Zuständigkeitswechsel des Kostenträgers/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "059",
+                        "value" : "Zuständigkeitswechsel des Kostenträgers/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "05x",
+                        "value" : "Zuständigkeitswechsel des Kostenträgers/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "061",
+                        "value" : "Verlegung in ein anderes Krankenhaus/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "062",
+                        "value" : "Verlegung in ein anderes Krankenhaus/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "069",
+                        "value" : "Verlegung in ein anderes Krankenhaus/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "06x",
+                        "value" : "Verlegung in ein anderes Krankenhaus/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "071",
+                        "value" : "Tod/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "072",
+                        "value" : "Tod/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "079",
+                        "value" : "Tod/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "07x",
+                        "value" : "Tod/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "081",
+                        "value" : "Verlegung in ein anderes Krankenhaus im Rahmen einer Zusammenarbeit (§ 14 Abs. 5 Satz 2 BPflV in der am 31.12.2003 geltenden Fassung)/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "082",
+                        "value" : "Verlegung in ein anderes Krankenhaus im Rahmen einer Zusammenarbeit (§ 14 Abs. 5 Satz 2 BPflV in der am 31.12.2003 geltenden Fassung)/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "089",
+                        "value" : "Verlegung in ein anderes Krankenhaus im Rahmen einer Zusammenarbeit (§ 14 Abs. 5 Satz 2 BPflV in der am 31.12.2003 geltenden Fassung)/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "08x",
+                        "value" : "Verlegung in ein anderes Krankenhaus im Rahmen einer Zusammenarbeit (§ 14 Abs. 5 Satz 2 BPflV in der am 31.12.2003 geltenden Fassung)/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "091",
+                        "value" : "Entlassung in eine Rehabilitationseinrichtung/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "092",
+                        "value" : "Entlassung in eine Rehabilitationseinrichtung/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "099",
+                        "value" : "Entlassung in eine Rehabilitationseinrichtung/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "09x",
+                        "value" : "Entlassung in eine Rehabilitationseinrichtung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "101",
+                        "value" : "Entlassung in eine Pflegeeinrichtung/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "102",
+                        "value" : "Entlassung in eine Pflegeeinrichtung/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "109",
+                        "value" : "Entlassung in eine Pflegeeinrichtung/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "10x",
+                        "value" : "Entlassung in eine Pflegeeinrichtung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "111",
+                        "value" : "Entlassung in ein Hospiz/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "112",
+                        "value" : "Entlassung in ein Hospiz/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "119",
+                        "value" : "Entlassung in ein Hospiz/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "11x",
+                        "value" : "Entlassung in ein Hospiz/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "121",
+                        "value" : "interne Verlegung, arbeitsfähig entlassen/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "122",
+                        "value" : "interne Verlegung, arbeitsfähig entlassen/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "129",
+                        "value" : "interne Verlegung, arbeitsfähig entlassen/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "12x",
+                        "value" : "interne Verlegung, arbeitsfähig entlassen/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "131",
+                        "value" : "externe Verlegung zur psychiatrischen Behandlung/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "132",
+                        "value" : "externe Verlegung zur psychiatrischen Behandlung/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "139",
+                        "value" : "externe Verlegung zur psychiatrischen Behandlung/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "13x",
+                        "value" : "externe Verlegung zur psychiatrischen Behandlung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "141",
+                        "value" : "Behandlung aus sonstigen Gründen beendet, nachstationäre Behandlung vorgesehen/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "142",
+                        "value" : "Behandlung aus sonstigen Gründen beendet, nachstationäre Behandlung vorgesehen/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "149",
+                        "value" : "Behandlung aus sonstigen Gründen beendet, nachstationäre Behandlung vorgesehen/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "14x",
+                        "value" : "Behandlung aus sonstigen Gründen beendet, nachstationäre Behandlung vorgesehen/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "151",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet, nachstationäre Behandlung vorgesehen/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "152",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet, nachstationäre Behandlung vorgesehen/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "159",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet, nachstationäre Behandlung vorgesehen/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "15x",
+                        "value" : "Behandlung gegen ärztlichen Rat beendet, nachstationäre Behandlung vorgesehen/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "161",
+                        "value" : "externe Verlegung mit Rückverlegung oder Wechsel zwischen den Entgeltbereichen der DRG-Fallpau- schalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG mit Rückverlegung/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "162",
+                        "value" : "externe Verlegung mit Rückverlegung oder Wechsel zwischen den Entgeltbereichen der DRG-Fallpau- schalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG mit Rückverlegung/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "169",
+                        "value" : "externe Verlegung mit Rückverlegung oder Wechsel zwischen den Entgeltbereichen der DRG-Fallpau- schalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG mit Rückverlegung/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "16x",
+                        "value" : "externe Verlegung mit Rückverlegung oder Wechsel zwischen den Entgeltbereichen der DRG-Fallpau- schalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG mit Rückverlegung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "171",
+                        "value" : "interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "172",
+                        "value" : "interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "179",
+                        "value" : "interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "17x",
+                        "value" : "interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "181",
+                        "value" : "Rückverlegung/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "182",
+                        "value" : "Rückverlegung/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "189",
+                        "value" : "Rückverlegung/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "18x",
+                        "value" : "Rückverlegung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "191",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "192",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "199",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "19x",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "201",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung wegen Komplikation/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "202",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung wegen Komplikation/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "209",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung wegen Komplikation/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "20x",
+                        "value" : "Entlassung vor Wiederaufnahme mit Neueinstufung wegen Komplikation/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "211",
+                        "value" : "Entlassung oder Verlegung mit nachfolgender Wiederaufnahme/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "212",
+                        "value" : "Entlassung oder Verlegung mit nachfolgender Wiederaufnahme/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "219",
+                        "value" : "Entlassung oder Verlegung mit nachfolgender Wiederaufnahme/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "21x",
+                        "value" : "Entlassung oder Verlegung mit nachfolgender Wiederaufnahme/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "221",
+                        "value" : "Fallabschluss (interne Verlegung) bei Wechsel zwischen voll-, teilstationärer und stationsäquivalenter Behandlung/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "222",
+                        "value" : "Fallabschluss (interne Verlegung) bei Wechsel zwischen voll-, teilstationärer und stationsäquivalenter Behandlung/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "229",
+                        "value" : "Fallabschluss (interne Verlegung) bei Wechsel zwischen voll-, teilstationärer und stationsäquivalenter Behandlung/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "22x",
+                        "value" : "Fallabschluss (interne Verlegung) bei Wechsel zwischen voll-, teilstationärer und stationsäquivalenter Behandlung/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "231",
+                        "value" : "Beginn eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für verlegende Fachabteilung)/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "232",
+                        "value" : "Beginn eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für verlegende Fachabteilung)/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "239",
+                        "value" : "Beginn eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für verlegende Fachabteilung)/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "23x",
+                        "value" : "Beginn eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für verlegende Fachabteilung)/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "241",
+                        "value" : "Beendigung eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für Pseudo-Fachabteilung 0003)/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "242",
+                        "value" : "Beendigung eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für Pseudo-Fachabteilung 0003)/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "249",
+                        "value" : "Beendigung eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für Pseudo-Fachabteilung 0003)/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "24x",
+                        "value" : "Beendigung eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für Pseudo-Fachabteilung 0003)/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "251",
+                        "value" : "Entlassung zum Jahresende bei Aufnahme im Vorjahr (für Zwecke der Abrechnung - § 4 PEPPV)/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "252",
+                        "value" : "Entlassung zum Jahresende bei Aufnahme im Vorjahr (für Zwecke der Abrechnung - § 4 PEPPV)/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "259",
+                        "value" : "Entlassung zum Jahresende bei Aufnahme im Vorjahr (für Zwecke der Abrechnung - § 4 PEPPV)/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "25x",
+                        "value" : "Entlassung zum Jahresende bei Aufnahme im Vorjahr (für Zwecke der Abrechnung - § 4 PEPPV)/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "261",
+                        "value" : "Beginn eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung)/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "262",
+                        "value" : "Beginn eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung)/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "269",
+                        "value" : "Beginn eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung)/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "26x",
+                        "value" : "Beginn eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung)/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "271",
+                        "value" : "Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung – für Pseudo-Fachabteilung 0004)/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "272",
+                        "value" : "Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung – für Pseudo-Fachabteilung 0004)/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "279",
+                        "value" : "Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung – für Pseudo-Fachabteilung 0004)/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "27x",
+                        "value" : "Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung – für Pseudo-Fachabteilung 0004)/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "281",
+                        "value" : "Behandlung regulär beendet, beatmet entlassen/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "282",
+                        "value" : "Behandlung regulär beendet, beatmet entlassen/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "289",
+                        "value" : "Behandlung regulär beendet, beatmet entlassen/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "28x",
+                        "value" : "Behandlung regulär beendet, beatmet entlassen/"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "291",
+                        "value" : "Behandlung regulär beendet, beatmet verlegt/arbeitsfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "292",
+                        "value" : "Behandlung regulär beendet, beatmet verlegt/arbeitsunfähig entlassen"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "299",
+                        "value" : "Behandlung regulär beendet, beatmet verlegt/keine Angabe"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "29x",
+                        "value" : "Behandlung regulär beendet, beatmet verlegt/"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0027.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-organisation-002.v1",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Aufnahmeanlass",
+            "description" : "The type of admission.",
+            "comment" : "For example: day surgery; elective surgery or em. "
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Entlassgrund",
+            "description" : "Outcome for the individual at the end of the episode of care.",
+            "comment" : "For example: recovered/not recovered/death."
+          }
+        },
+        "nb" : {
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Aufnahmeanlass",
+            "description" : "Innleggelsestype.",
+            "comment" : "For eksempel: dagkirurgi; elektiv kirurgi eller ø.hjelp."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Entlassgrund",
+            "description" : "Utfall av omsorgsepisoden.",
+            "comment" : "For eksempel: bedring/ingen bedring/død."
+          }
+        },
+        "it" : {
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Aufnahmeanlass",
+            "description" : "*The type of admission. (en)",
+            "comment" : "*For example: day surgery; elective surgery or em.  (en)"
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Entlassgrund",
+            "description" : "*Outcome for the individual at the end of the episode of care. (en)",
+            "comment" : "Per esempio: recuperato/non recuperato/morte."
+          }
+        },
+        "de" : {
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Aufnahmeanlass",
+            "description" : "Die Art der Aufnahme.",
+            "comment" : "Zum Beispiel: ambulante Operation, elektive Operation oder Notfall"
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Entlassgrund",
+            "description" : "Outcome des Aufenthaltes zum Zeitpunkt der Entlassung.",
+            "comment" : "Zum Beispiel: genesen/nicht genesen/tot"
+          }
+        }
+      },
+      "termBindings" : {
+        "//fhir.hl7.org/" : {
+          "ac0.1" : "ValueSet/$expand?url=http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "cfa3f5d2-9ffa-4e2b-aa37-9daee93f16e0",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Pascal Biermann",
+        "organisation" : "Carl von Ossietzky Universität Oldenburg",
+        "email" : "pascal.biermann@uni-oldenburg.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Mikkel Johan Gaup Grønmo, Vebjørn Arntzen",
+        "organisation" : "Helse Vest IKT AS, Helse Nord IKT, Oslo University Hospital",
+        "email" : "silje.ljosland.bakke@helse-vest-ikt.no, mikkel.johan.gaup.gronmo@hnikt.no, varntzen@ous-hf.no"
+      },
+      "accreditation" : "Nasjonal IKT",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "18f96334-947e-4451-ba42-1d790977f553",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "5DFD0809E7CD46EA0712A590C68F545B"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0003]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          }
+        },
+        "de" : {
+          "/items[at0003]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          }
+        },
+        "sv" : {
+          "/items[at0003]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          }
+        },
+        "nb" : {
+          "/items[at0003]" : {
+            "fhir" : "Encounter.hospitalization.dischargeDisposition.extension:Entlassungsgrund"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-organisation-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-address-003.v1",
+          "referenceType" : "archetypeOverlay"
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Überweiser",
+            "description" : "An entity comprising one or more people and having a particular purpose.",
+            "comment" : "For example: a company, institution, association, network, department, community group, healthcare practice group, payer/insurer, care team, or a group of neighbours who provide care or support."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Überweiser",
+            "description" : "En entitet som består av ett eller flere mennesker med et bestemt formål.",
+            "comment" : "For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Überweiser",
+            "description" : "Eine Einheit, die aus einer oder mehreren Personen besteht und ein bestimmtes Ziel hat.",
+            "comment" : "Zum Beispiel: ein Unternehmen, eine Institution, ein Verband, ein Netzwerk, eine Abteilung, eine Gemeindegruppe, eine Gesundheitspraxisgruppe, ein Kostenträger/Versicherer, ein Pflegeteam oder eine Gruppe von Nachbarn, die Pflege oder Unterstützung leisten."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Überweiser",
+            "description" : "*An entity comprising one or more people and having a particular purpose. (en)",
+            "comment" : "*For example: a company, institution, association, network, department, community group, healthcare practice group, payer/insurer, care team, or a group of neighbours who provide care or support. (en)"
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "8543bf4b-0e15-4990-8a02-c7d082df8617",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Therese Lindberg, Erik Sundvall",
+        "organisation" : "Cambio CDS, Karolinska Institutet + Karolinska University Hospital, Region Stockholm + Linköping University",
+        "email" : "therese.lindberg@cambio.se, erik.sundvall@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Liv Laugen, John Tore Valand, Vebjørn Arntzen, Kanika Kuwelker",
+        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen, Helse Vest IKT",
+        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no, varntzen@ous-hf.no, kanika.kuwelker@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "9d44ce81-a4e4-4edc-a828-20f5e4b88af5",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "4CB383854196F76408BABBEB02117881"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.address.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-address-003.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0021.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "property",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "openehr"
+                  },
+                  "constraint" : [ "497" ]
+                } ]
+              } ],
+              "attributeTuples" : [ {
+                "@type" : "C_ATTRIBUTE_TUPLE",
+                "members" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "magnitude",
+                  "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "units",
+                  "children" : [ ]
+                } ],
+                "tuples" : [ {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : -90.0,
+                      "upper" : 90.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "deg" ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "property",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "openehr"
+                  },
+                  "constraint" : [ "497" ]
+                } ]
+              } ],
+              "attributeTuples" : [ {
+                "@type" : "C_ATTRIBUTE_TUPLE",
+                "members" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "magnitude",
+                  "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "units",
+                  "children" : [ ]
+                } ],
+                "tuples" : [ {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : -180.0,
+                      "upper" : 180.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "deg" ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0009.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "property",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "openehr"
+                  },
+                  "constraint" : [ "122" ]
+                } ]
+              } ],
+              "attributeTuples" : [ {
+                "@type" : "C_ATTRIBUTE_TUPLE",
+                "members" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "units",
+                  "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "magnitude",
+                  "children" : [ ]
+                } ],
+                "tuples" : [ {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "m" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "constraint" : [ ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0019.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0011", "at0012", "at0013" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0014.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0015", "at0016", "at0017" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "de" : { },
+        "pt-pt" : { },
+        "el" : { },
+        "fr" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "98bc048f-0811-45f4-8f58-46853c50ac46",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch, Alina Rehberg",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-pt"
+      },
+      "author" : {
+        "name" : "Hugo Silva",
+        "organisation" : "University of Minho",
+        "email" : "pg50416@uminho.pt"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Erik Sundvall",
+        "organisation" : "Karolinska Institutet + Karolinska University Hospital, Region Stockholm + Linköping University",
+        "email" : "erik.sundvall@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Liv Laugen, John Tore Valand, Vebjørn Arntzen, Kanika Kuwelker",
+        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen, Helse Vest IKT",
+        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no, varntzen@ous-hf.no, kanika.kuwelker@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "el"
+      },
+      "author" : {
+        "name" : "Erasmia Partafylla",
+        "organisation" : "Sigmasoft",
+        "email" : "c.partafylla@sigmasoft.gr"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "cc3a20b3-8928-4c2a-babd-fe9e28987be7",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "F3BA1A6809F466FF10AB50CC86EC78C5"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "de" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "sv" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "fi" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "ko" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "pt-br" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "ar-sy" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "it" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "zh-cn" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "es" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "zh" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "es-ar" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "nb" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "nl" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        },
+        "ca" : {
+          "/data[at0001]/items[at0079.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnosesubTyp"
+          },
+          "/data[at0001]/items[at0009.1]" : {
+            "fhir" : "Encounter.diagnosis.use.coding.DiagnoseTyp"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "fhir" : "Encounter.diagnosis.use.text"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-problem_diagnosis-004.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "0..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0079.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "0..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "existence" : "0..1",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "//fhir.hl7.org/"
+                      },
+                      "constraint" : [ "ac0.1" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ],
+              "attributeCustomizations" : {
+                "links" : {
+                  "aliases" : {
+                    "es" : "links",
+                    "es-ar" : "links",
+                    "de" : "links",
+                    "en" : "links",
+                    "ar-sy" : "links",
+                    "pt-br" : "links",
+                    "nb" : "links",
+                    "sv" : "links",
+                    "ko" : "links",
+                    "fi" : "links",
+                    "it" : "links",
+                    "nl" : "links",
+                    "zh" : "links",
+                    "ca" : "links",
+                    "zh-cn" : "links"
+                  }
+                }
+              }
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0009.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "0..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "existence" : "0..1",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "//fhir.hl7.org/"
+                      },
+                      "constraint" : [ "ac0.2" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0012.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0078.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0077.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0005.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "at0047", "at0048", "at0049" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0072.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0030.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0073.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "at0074", "at0075", "at0076" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0069.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0032",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "1..1",
+              "nodeId" : "at0071.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-case_identification-005.v0",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "es" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "Variante o subtipo específico del Diagnóstico, si procede.",
+            "comment" : "Por ejemplo: \"neuropatía axonal motora aguda\" como variante del síndrome de Guillain-Barré. Siempre que sea posible, es preferible codificar el nombre de la variante con una terminología."
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Descripción narrativa del problema o diagnóstico.",
+            "comment" : "Se utiliza para proporcionar antecedentes y contexto, incluida la evolución, los episodios o exacerbaciones, los progresos y cualquier otro detalle pertinente, sobre el problema o el diagnóstico."
+          }
+        },
+        "es-ar" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Descripción narrativa del problema o diagnóstico.",
+            "comment" : "Utilizar para proveer trasfondo y contexto, incluyendo evolución, episodios o exacerbaciones, progreso y cualquier otro detalles relevante acerca del problema o diagnóstico."
+          }
+        },
+        "de" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "Spezifische Variante oder Subtyp der Diagnose, falls relevant.",
+            "comment" : "Zum Beispiel: „Akute motorische axonale Neuropathie“ als Variante des Guillain-Barre-Syndroms. Wo möglich, ist die Kodierung des Namens der Variante über eine Terminologie zu bevorzugen."
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Beschreibung des Problems oder der Diagnose.",
+            "comment" : "Wird verwendet, um Hintergrund und Kontext, einschließlich Entwicklung, Episoden oder Verschlechterungen, Fortschritt und andere relevante Details über das Problem oder die Diagnose zu liefern."
+          }
+        },
+        "en" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "Specific variant or subtype of the Diagnosis, if relevant.",
+            "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Narrative description about the problem or diagnosis.",
+            "comment" : "Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis."
+          }
+        },
+        "ar-sy" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "*Narrative description about the problem or diagnosis.(en)",
+            "comment" : "*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)"
+          }
+        },
+        "pt-br" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Descrição narrativa sobre o problema ou diagnóstico.",
+            "comment" : "Usar para fornecer conhecimento e contexto, incluindo evolução, episódios ou exacerbações, progresso e quaisquer outros detalhes relevantes, sobre o problema ou diagnóstico."
+          }
+        },
+        "nb" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "Spesifikk variant eller subtype av diagnose, hvis det er relevant.",
+            "comment" : "For eksempel \"akutt motorisk aksonal nevropati\" som en variant av Guillain-Barre Syndrom. Koding av navnet på varianten med en terminologi er foretrukket hvis mulig."
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Fritekstbeskrivelse av problemet eller diagnosen.",
+            "comment" : "Brukes til å gi bakgrunn og kontekst, inkludert utvikling, episoder eller forverringer, fremgang og alle andre relevante detaljer, om problemet eller diagnosen."
+          }
+        },
+        "sv" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "En beskrivning av problemet eller diagnosen.",
+            "comment" : "Används för att ge bakgrund och kontext, inklusive utveckling, episoder eller exacerbationer, framsteg och andra relevanta detaljer om problemet eller diagnosen."
+          }
+        },
+        "ko" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "문제 또는 진단에 대한 서술 기록.",
+            "comment" : "문제와 진단에 대한 진화(evolution)와 에피소드 또는 악화, 경과를 포함한 배경과 문액 그리고 다른 관련된 상세내용을 제공하는데 사용함."
+          }
+        },
+        "fi" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Ongelman tai diagnoosin vapaamuotoinen selitys",
+            "comment" : "*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)"
+          }
+        },
+        "it" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Descrizione narrativa del problema o della diagnosi.",
+            "comment" : "Utilizzare questo campo per fornire il background e il contesto, compresa l'evoluzione, gli episodi o le esacerbazioni, i progressi e qualsiasi altro dettaglio rilevante circa il problema o la diagnosi."
+          }
+        },
+        "nl" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Verhalende beschrijving van het probleem of de diagnose.",
+            "comment" : "*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)"
+          }
+        },
+        "zh" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "*Narrative description about the problem or diagnosis.(en)",
+            "comment" : "*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)"
+          }
+        },
+        "ca" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "Variant o subtipus específic del Diagnòstic, si escau.",
+            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. (en)"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "Descripció narrativa del problema o diagnòstic.",
+            "comment" : "*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)"
+          }
+        },
+        "zh-cn" : {
+          "at0079.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0079.1",
+            "text" : "Diagnosesubtyp",
+            "description" : "当前诊断的特定变体/变异类型或亚型/子类型（如果相关/合适）。",
+            "comment" : "例如：“急性运动轴突性神经病”（acute motor axonal neuropathy）就属于是吉兰-巴雷综合征（Guillain-Barre Syndrome）的变体。尽可能首选采用术语标准对变体/亚型的名称进行编码。"
+          },
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Diagnosetyp",
+            "description" : "关于当前问题或诊断的叙述性描述。",
+            "comment" : "用于提供关于问题或诊断的背景和上下文/语境，包括发展演变、片段或恶化、进展和任何其他相关的详情。"
+          }
+        }
+      },
+      "termBindings" : {
+        "//fhir.hl7.org/" : {
+          "ac0.1" : "ValueSet/$expand?url=http://fhir.de/ValueSet/Diagnosesubtyp",
+          "ac0.2" : "ValueSet/$expand?url=http://fhir.de/ValueSet/DiagnoseTyp"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "5084c995-e34b-4832-aa41-b43ca3fe7fdf",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Aljoscha Kindermann, Jasmin Buck, Sebastian Garde, Natalia Strauch, Alina Rehberg",
+        "organisation" : "Universityhospital of Heidelberg, University of Heidelberg, Central Queensland University, Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Kirsi Poikela",
+        "organisation" : "Tieto Sweden AB",
+        "email" : "ext.kirsi.poikela@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fi"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ko"
+      },
+      "author" : {
+        "name" : "Seung-Jong Yu",
+        "organisation" : "InfoClinic Co.,Ltd.",
+        "email" : "seungjong.yu@gmail.com"
+      },
+      "accreditation" : "M.D.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Adriana Kitajima, Gabriela Alves, Maria Angela Scatena, Marivan Abrahäo",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Cecilia Mascia",
+        "organisation" : "CRS4 - Center for advanced studies, research and development in Sardinia, Pula (Cagliari), Italy",
+        "email" : "cecilia.mascia@crs4.it"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Lin Zhang",
+        "organisation" : "Freelancer",
+        "email" : "linforest@163.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Pablo Pazos, Julio de Sosa",
+        "organisation" : "CaboLabs, Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
+      },
+      "accreditation" : "Computer Engineer",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh"
+      },
+      "author" : {
+        "name" : "Yexuan Cheng",
+        "organisation" : "浙江大学",
+        "email" : "3160100913@zju.edu.cn"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
+        "email" : "alandmarch@gmail.com"
+      },
+      "accreditation" : "-",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, John Tore Valand, Liv Laugen, Vebjørn Arntzen",
+        "organisation" : "Helse Bergen HF, ​Oslo University Hospital, Norway",
+        "email" : "liv.laugen@ous-hf.no, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Elisa Asensio",
+        "email" : "easensiob@clinic.cat"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b5bfd7b0-eb33-4b1a-86a4-eedd5b44e41a",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D94F932D76D2D0389D242063ED336124"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.case_identification.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-case_identification-005.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "//fhir.hl7.org/"
+                  },
+                  "constraint" : [ "ac0.1" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fallstatus",
+            "description" : "To record case identification details for public health purposes."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fallstatus",
+            "description" : "For registrering av case identifikasjons detaljer for offentlige helseformål."
+          }
+        },
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fallstatus",
+            "description" : "لتسجيل تفاصيل تعريف الحالة لأغراض الصحة العامة"
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fallstatus",
+            "description" : "Zur Erfassung von Details zur Identifikation eines Falls im Gesundheitswesen."
+          }
+        }
+      },
+      "termBindings" : {
+        "//fhir.hl7.org/" : {
+          "ac0.1" : "ValueSet/$expand?url=http://hl7.org/fhir/encounter-status"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "76b9367d-f26d-4d22-a79d-d02cffa0dda5",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Michael Lieser",
+        "organisation" : "University of Heidelberg, Department of Infectious Diseases",
+        "email" : "michael.lieser@med.uni-heidelberg.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "de"
+  },
+  "translations" : [ ]
+}
